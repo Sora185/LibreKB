@@ -11,7 +11,7 @@
             </div>
             <h3 class="text-muted mb-3">No categories available</h3>
             <p class="text-muted mb-4">There are currently no categories to browse.</p>
-            <a href="/search" class="btn btn-primary">
+            <a href="<?php echo $basePath; ?>/search" class="btn btn-primary">
                 <i class="bi bi-search me-2"></i>Search instead
             </a>
         </div>
