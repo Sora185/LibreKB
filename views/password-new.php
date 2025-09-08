@@ -26,7 +26,7 @@
                     </div>
                 <?php endif; ?>
                 
-                <form action="/password/new" method="POST" novalidate>
+                <form action="<?php echo $basePath; ?>/password/new" method="POST" novalidate>
                     <div class="mb-3">
                         <label for="password1" class="form-label">
                             <i class="bi bi-lock me-2"></i>New Password

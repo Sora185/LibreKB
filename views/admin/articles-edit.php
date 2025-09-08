@@ -6,7 +6,7 @@
             </div>
             <hr>
         </header>
-        <form action="/admin/articles/<?php echo $article['id']; ?>" method="POST">
+        <form action="<?php echo $basePath; ?>/admin/articles/<?php echo $article['id']; ?>" method="POST">
             <div class="row">
                 <div class="col-md-8">
                     <div class="mb-3">

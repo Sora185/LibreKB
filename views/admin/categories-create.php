@@ -7,7 +7,7 @@
             </div>
             <hr>
         </header>
-        <form action="/admin/categories/create" method="POST">
+        <form action="<?php echo $basePath; ?>/admin/categories/create" method="POST">
             <div class="row">
                 <div class="col-md-8">
                     <div class="mb-3">

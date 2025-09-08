@@ -10,7 +10,7 @@
                 </div>
                 <hr>
             </header>
-            <form action="/admin/users/<?php echo $editUser['id']; ?>" method="POST">
+            <form action="<?php echo $basePath; ?>/admin/users/<?php echo $editUser['id']; ?>" method="POST">
                 <div class="row">
                     <div class="col-md-6">
                         <div class="mb-3">

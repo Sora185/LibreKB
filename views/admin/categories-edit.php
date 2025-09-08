@@ -7,7 +7,7 @@
             </div>
             <hr>
         </header>
-        <form action="/admin/categories/<?php echo $category['id']; ?>" method="POST">
+        <form action="<?php echo $basePath; ?>/admin/categories/<?php echo $category['id']; ?>" method="POST">
             <div class="row">
                 <div class="col-md-8">
                     <div class="mb-3">

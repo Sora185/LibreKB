@@ -40,8 +40,8 @@
                                 <i class="bi bi-gear text-success"></i> Administration
                             </h5>
                             <div class="d-grid gap-2">
-                                <a href="/admin/users" class="btn btn-outline-primary btn-sm">Manage Users</a>
-                                <a href="/admin/settings" class="btn btn-outline-primary btn-sm">Site Settings</a>
+                                <a href="<?php echo $basePath; ?>/admin/users" class="btn btn-outline-primary btn-sm">Manage Users</a>
+                                <a href="<?php echo $basePath; ?>/admin/settings" class="btn btn-outline-primary btn-sm">Site Settings</a>
                             </div>
                         </div>
                     </div>
@@ -81,7 +81,7 @@
                         <p class="mb-0">Start by creating your first category, then add articles to organize your knowledge base.</p>
                     </div>
                     <?php if ($user['group'] === 'admin' || $user['group'] === 'manager'): ?>
-                    <a href="/admin/categories/create" class="btn btn-primary">
+                    <a href="<?php echo $basePath; ?>/admin/categories/create" class="btn btn-primary">
                         <i class="bi bi-folder-plus"></i> Create Category
                     </a>
                     <?php endif; ?>
@@ -92,7 +92,7 @@
                 <div class="card-header d-flex justify-content-between align-items-center">
                     <h5 class="mb-0"><i class="bi bi-diagram-3"></i> Knowledge Base Structure</h5>
                     <?php if ($user['group'] === 'admin' || $user['group'] === 'manager'): ?>
-                    <a href="/admin/categories/create" class="btn btn-primary btn-sm">
+                    <a href="<?php echo $basePath; ?>/admin/categories/create" class="btn btn-primary btn-sm">
                         <i class="bi bi-folder-plus"></i> Create Category
                     </a>
                     <?php endif; ?>
@@ -149,7 +149,7 @@
                         }
                         
                         echo '<h' . ($level + 5) . ' class="mb-0 me-3">';
-                        echo '<a href="/admin/categories/' . $category['id'] . '" class="text-decoration-none">';
+                        echo '<a href="' . $basePath . '/admin/categories/' . $category['id'] . '" class="text-decoration-none">';
                         echo htmlspecialchars($category['name']);
                         echo '</a>';
                         echo '</h' . ($level + 5) . '>';
@@ -172,13 +172,13 @@
                         // Category actions (admin and manager only)
                         if ($user['group'] === 'admin' || $user['group'] === 'manager') {
                             echo '<div class="btn-group btn-group-sm" role="group">';
-                            echo '<a href="/admin/articles/create?category=' . $category['id'] . '" class="btn btn-success btn-sm" title="Create Article in ' . htmlspecialchars($category['name']) . '">';
+                            echo '<a href="' . $basePath . '/admin/articles/create?category=' . $category['id'] . '" class="btn btn-success btn-sm" title="Create Article in ' . htmlspecialchars($category['name']) . '">';
                             echo '<i class="bi bi-file-earmark-plus"></i>';
                             echo '</a>';
-                            echo '<a href="/admin/categories/' . $category['id'] . '" class="btn btn-outline-primary btn-sm" title="Edit Category">';
+                            echo '<a href="' . $basePath . '/admin/categories/' . $category['id'] . '" class="btn btn-outline-primary btn-sm" title="Edit Category">';
                             echo '<i class="bi bi-pencil"></i>';
                             echo '</a>';
-                            echo '<a href="/admin/categories/' . $category['id'] . '/delete" ';
+                            echo '<a href="' . $basePath . '/admin/categories/' . $category['id'] . '/delete" ';
                             echo 'class="btn btn-outline-danger btn-sm" title="Delete Category" ';
                             echo 'onclick="return confirm(\'Are you sure?\')"><i class="bi bi-trash"></i></a>';
                             echo '</div>';
@@ -201,7 +201,7 @@
                                 echo '<div class="d-flex justify-content-between align-items-center py-1 border-bottom">';
                                 echo '<div class="d-flex align-items-center">';
                                 echo '<i class="bi bi-file-earmark-text me-2 text-info"></i>';
-                                echo '<a href="/admin/articles/' . $article['id'] . '" class="text-decoration-none">';
+                                echo '<a href="' . $basePath . '/admin/articles/' . $article['id'] . '" class="text-decoration-none">';
                                 echo htmlspecialchars($article['title']);
                                 echo '</a>';
                                 
@@ -225,10 +225,10 @@
                                 // Article actions (admin and manager only)
                                 if ($user['group'] === 'admin' || $user['group'] === 'manager') {
                                     echo '<div class="btn-group btn-group-sm" role="group">';
-                                    echo '<a href="/admin/articles/' . $article['id'] . '" class="btn btn-outline-primary btn-sm">';
+                                    echo '<a href="' . $basePath . '/admin/articles/' . $article['id'] . '" class="btn btn-outline-primary btn-sm">';
                                     echo '<i class="bi bi-pencil"></i>';
                                     echo '</a>';
-                                    echo '<a href="/admin/articles/' . $article['id'] . '/delete" ';
+                                    echo '<a href="' . $basePath . '/admin/articles/' . $article['id'] . '/delete" ';
                                     echo 'class="btn btn-outline-danger btn-sm" ';
                                     echo 'onclick="return confirm(\'Are you sure?\')"><i class="bi bi-trash"></i></a>';
                                     echo '</div>';
@@ -283,7 +283,7 @@
                             echo '<div class="d-flex justify-content-between align-items-center py-1 border-bottom">';
                             echo '<div class="d-flex align-items-center">';
                             echo '<i class="bi bi-file-earmark-text me-2 text-info"></i>';
-                            echo '<a href="/admin/articles/' . $article['id'] . '" class="text-decoration-none">';
+                            echo '<a href="' . $basePath . '/admin/articles/' . $article['id'] . '" class="text-decoration-none">';
                             echo htmlspecialchars($article['title']);
                             echo '</a>';
                             echo '<span class="badge bg-' . ($article['status'] === 'enabled' ? 'success' : 'secondary') . ' ms-2 badge-sm">';
@@ -293,10 +293,10 @@
                             // Article actions (admin and manager only)
                             if ($user['group'] === 'admin' || $user['group'] === 'manager') {
                                 echo '<div class="btn-group btn-group-sm" role="group">';
-                                echo '<a href="/admin/articles/' . $article['id'] . '" class="btn btn-outline-primary btn-sm" title="Edit Article">';
+                                echo '<a href="' . $basePath . '/admin/articles/' . $article['id'] . '" class="btn btn-outline-primary btn-sm" title="Edit Article">';
                                 echo '<i class="bi bi-pencil"></i>';
                                 echo '</a>';
-                                echo '<a href="/admin/articles/' . $article['id'] . '/delete" ';
+                                echo '<a href="' . $basePath . '/admin/articles/' . $article['id'] . '/delete" ';
                                 echo 'class="btn btn-outline-danger btn-sm" title="Delete Article" ';
                                 echo 'onclick="return confirm(\'Are you sure?\')"><i class="bi bi-trash"></i></a>';
                                 echo '</div>';

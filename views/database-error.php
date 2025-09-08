@@ -1,3 +1,23 @@
+<?php
+// Detect base path from config if available
+$basePath = '';
+if (class_exists('Config') && method_exists('Config', 'get')) {
+    $systemURL = Config::get('systemURL');
+    if ($systemURL) {
+        $basePath = rtrim(parse_url($systemURL, PHP_URL_PATH), '/');
+    }
+} else {
+    // Fallback: try to detect from request URI
+    $scriptName = $_SERVER['SCRIPT_NAME'] ?? '';
+    $requestUri = $_SERVER['REQUEST_URI'] ?? '';
+    
+    // Get the directory path of the script
+    $scriptDir = dirname($scriptName);
+    if ($scriptDir !== '/' && $scriptDir !== '.') {
+        $basePath = $scriptDir;
+    }
+}
+?>
 <!doctype html>
 <html lang="en">
     <head>
@@ -54,6 +74,6 @@
             </div>
         </div>
         
-        <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="<?php echo $basePath; ?>/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     </body>
 </html>

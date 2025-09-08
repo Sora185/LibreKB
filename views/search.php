@@ -15,7 +15,7 @@
             </header>
             
             <main>
-                <form action="/search" method="POST">
+                <form action="<?php echo $basePath; ?>/search" method="POST">
                     <div class="card shadow-sm">
                         <div class="card-body p-4">
                             <div class="input-group input-group-lg">

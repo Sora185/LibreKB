@@ -33,7 +33,7 @@
                     </div>
                 <?php endif; ?>
                 
-                <form action="/login" method="POST" novalidate>
+                <form action="<?php echo $basePath; ?>/login" method="POST" novalidate>
                     <div class="mb-3">
                         <label for="email" class="form-label">
                             <i class="bi bi-envelope me-2"></i>Email Address
