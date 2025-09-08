@@ -7,10 +7,6 @@
 // Start session
 session_start();
 
-// Error reporting for development
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-
 // Define constants
 define('ROOT_PATH', __DIR__);
 define('CORE_PATH', ROOT_PATH . '/core');
