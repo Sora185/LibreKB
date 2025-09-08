@@ -25,7 +25,7 @@
                             <input type="hidden" name="user_id" value="<?php echo $user['id']; ?>">
                             <div class="d-flex gap-2">
                                 <button type="submit" class="btn btn-primary">Update Profile</button>
-                                <a href="/" class="btn btn-secondary">Back to Knowledge Base</a>
+                                <a href="<?php echo $basePath; ?>/" class="btn btn-secondary">Back to Knowledge Base</a>
                             </div>
                         </form>
                     </div>

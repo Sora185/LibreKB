@@ -25,7 +25,7 @@
             <?php foreach ($categories as $category): ?>
                 <div class="col-12 col-md-6 col-lg-4 mb-4">
                     <div class="card h-100 shadow-sm border-0 category-result-card">
-                        <a href="/category/<?php echo htmlspecialchars($category['slug']); ?>" class="text-decoration-none">
+                        <a href="<?php echo $basePath; ?>/category/<?php echo htmlspecialchars($category['slug']); ?>" class="text-decoration-none">
                             <div class="card-body p-4">
                                 <div class="d-flex align-items-start">
                                     <div class="me-3">

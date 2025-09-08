@@ -59,7 +59,7 @@
                     
                     <div class="mb-3">
                         <button type="submit" class="btn btn-primary">Create Article</button>
-                        <a href="/admin" class="btn btn-secondary">Cancel</a>
+                        <a href="<?php echo $basePath; ?>/admin" class="btn btn-secondary">Cancel</a>
                     </div>
                 </div>
             </div>
@@ -67,7 +67,7 @@
     </main>
 </div>
 
-<script src="/vendor/tinymce/tinymce.min.js"></script>
+<script src="<?php echo $basePath; ?>/vendor/tinymce/tinymce.min.js"></script>
 <script>
 tinymce.init({
     selector: '#content',

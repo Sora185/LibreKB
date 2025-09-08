@@ -4,9 +4,9 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title><?php echo htmlspecialchars($pageTitle); ?></title>
-        <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="<?php echo $basePath; ?>/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
-        <link href="/css/other.css" rel="stylesheet" type="text/css">
+        <link href="<?php echo $basePath; ?>/css/other.css" rel="stylesheet" type="text/css">
     </head>
     <body class="password-reset-page">
         <div class="container">
@@ -49,13 +49,13 @@
                 </form>
                 
                 <div class="text-center">
-                    <a href="/login" class="auth-link">
+                    <a href="<?php echo $basePath; ?>/login" class="auth-link">
                         <i class="bi bi-arrow-left me-1"></i>Back to Sign In
                     </a>
                 </div>
             </div>
         </div>
         
-        <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="<?php echo $basePath; ?>/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     </body>
 </html>

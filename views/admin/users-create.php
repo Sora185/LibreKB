@@ -47,7 +47,7 @@
                         
                         <div class="mb-3">
                             <button type="submit" class="btn btn-primary">Create User</button>
-                            <a href="/admin/users" class="btn btn-secondary">Cancel</a>
+                            <a href="<?php echo $basePath; ?>/admin/users" class="btn btn-secondary">Cancel</a>
                         </div>
                     </div>
                     
