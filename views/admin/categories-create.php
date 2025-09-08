@@ -59,7 +59,7 @@
                     
                     <div class="mb-3">
                         <button type="submit" class="btn btn-primary">Create Category</button>
-                        <a href="/admin" class="btn btn-secondary">Cancel</a>
+                        <a href="<?php echo $basePath; ?>/admin" class="btn btn-secondary">Cancel</a>
                     </div>
                 </div>
             </div>
