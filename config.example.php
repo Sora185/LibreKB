@@ -12,7 +12,6 @@ class Config {
     
     // System Configuration
     public $systemURL;
-    public $updateCheck;
     
     // Email Configuration
     public $mailHost;
@@ -32,7 +31,6 @@ class Config {
 
         /* System Configuration */
         $this->systemURL = 'https://X.X.X/'; //example https://kb.example.com/ or https://example.com/kb/
-        $this->updateCheck = 'yes'; //Acceptable values are yes or no. Recommended value is yes
 
         /* Email Configuration */
         $this->mailHost       = 'X';                     //Set the SMTP server to send through
